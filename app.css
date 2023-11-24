@@ -1,0 +1,398 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  background: #f1f1f1;
+  font-family: "Inter", sans-serif;
+}
+/* link tags */
+a {
+  text-decoration: none;
+  color: #005bd3;
+  font-size: 14px;
+  font-weight: 500;
+}
+/* Profile text */
+.profile-menu p {
+  color: white;
+  font-size: 12px;
+  margin-right: 2rem;
+}
+.span {
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: #36fba1;
+  margin-left: 0.8rem;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0.2rem;
+}
+.span p {
+  opacity: 0.4;
+  color: #000000;
+  margin: 0rem;
+}
+/* Navigation styling */
+nav {
+  background-color: #1c181d;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  width: 98%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* menu */
+.notify-menu {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 1 10rem;
+}
+
+.notification {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  background-color: #303030;
+}
+
+/* Search input */
+.search input {
+  width: 30rem;
+  height: 2rem;
+  background-color: #322f33;
+  border-radius: 0.5rem;
+  border: solid 1px #616161;
+  color: #b5b5b5;
+  font-size: 13px;
+  font-weight: 600;
+  outline: none;
+  padding-left: 2rem;
+}
+
+#logo {
+  flex: 1 1 10rem;
+}
+
+.search {
+  display: flex;
+  min-height: 1rem;
+  margin: 0 auto;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 10rem;
+}
+.search svg {
+  position: absolute;
+  left: 0.5rem;
+}
+
+.profile-menu {
+  padding: 0.5rem;
+  width: 8.88rem;
+  height: 2rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #303030;
+  cursor: pointer;
+  position: relative;
+}
+
+/* main page font sizes */
+.trial p {
+  font-size: 0.75rem;
+  color: #e3e3e3;
+}
+/* Main page  select plans*/
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.trial {
+  width: 50rem;
+  height: 3.5rem;
+  background-color: #1a1a1a;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.select-cancel {
+  display: flex;
+
+  align-items: center;
+}
+.select-cancel button {
+  border: none;
+  border-radius: 0.3rem;
+
+  background-color: #ffffff;
+  color: #323232;
+  font-weight: 600;
+  font-size: 0.75rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  padding: 0.416rem 0.644rem;
+}
+
+.select-cancel svg {
+  cursor: pointer;
+}
+
+/* font-size of the texts in contents */
+.setup {
+  font-size: 14px;
+  color: #303030;
+  font-weight: 600;
+  /* line-height: 0.8; */
+}
+.info {
+  font-size: 13px;
+  color: #303030;
+  margin: 0.5rem 0rem 1rem 0rem;
+}
+.progress {
+  color: #303030;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+.progress svg {
+  margin-top: 0.2rem;
+}
+.progress p {
+  margin-right: 0.5rem;
+}
+/* content of the main-page */
+.main-content {
+  background-color: #ffffff;
+  border: solid 1px #dbdbdb;
+  border-radius: 1rem;
+  padding: 0.449rem;
+  width: 50rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.guide {
+  padding: 0.35rem;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  cursor: pointer;
+}
+.arrow svg {
+  display: flex;
+  transition: all 0.1s ease;
+}
+
+/* Animations */
+/* arrow animation */
+.rotate-arrow {
+  transform: rotate(180deg);
+}
+/* ------ Main Options closed state ------ */
+.options0CL,
+.options1CL,
+.options2CL,
+.options3CL,
+.options4CL {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #f3f3f3; */
+  border-radius: 0.5rem;
+  padding: 0.51rem 0.35rem;
+  /* margin: 0.5rem 0rem 0.5rem 0rem; */
+}
+.custom-textCL,
+.product-textCL,
+.domain-textCL,
+.payment-textCL,
+.store-textCL {
+  font-size: 13px;
+  font-weight: 500;
+  color: #303030;
+}
+.options0CL {
+  margin-top: 1rem;
+}
+
+/* ------ Main options opened state ------ */
+.pop-down {
+  display: block;
+  background-color: #f3f3f3;
+}
+/* main conent text size */
+.custom-text,
+.product-text,
+.domain-text,
+.payment-text,
+.store-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #303030;
+}
+.custom-about,
+.product-about,
+.domain-about,
+.payment-about,
+.store-about {
+  /* display: flex; */
+  flex: 1;
+  font-size: 13px;
+  color: #616161;
+  font-weight: 500;
+  padding: 0.3rem 0rem 0.3rem 0.5rem;
+}
+
+/* content buttons */
+.custom,
+.product,
+.domain,
+.store,
+.payment {
+  background-color: #404040;
+  display: flex;
+  align-items: center;
+  height: 1.75rem;
+  font-size: 12px;
+  border-radius: 0.5rem;
+  color: #f6f3f6;
+  display: flex;
+  justify-content: center;
+  padding: 0.7rem 1.008rem;
+  border-top: solid 1.5px rgba(255, 255, 255, 0.56);
+  border-right: solid 1.5px rgba(255, 255, 255, 0.56);
+  border-left: solid 1.5px rgba(255, 255, 255, 0.56);
+  border-bottom: none;
+  box-shadow: 0.2px 0.3px 0.1px 2.5px #404040;
+  cursor: pointer;
+}
+
+/* content drop down */
+.options,
+.options1,
+.options2,
+.options3,
+.options4 {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #f3f3f3; */
+  border-radius: 0.5rem;
+  padding: 0.51rem 0.35rem;
+  margin: 1.5rem 0rem 0rem 0rem;
+}
+.custom-theme,
+.product-theme,
+.domain-theme,
+.store-theme,
+.payment-theme {
+  display: flex;
+  flex: 2.008;
+}
+.custom-image,
+.product-image,
+.domain-image,
+.store-image,
+.payment-image {
+  margin-left: 1.86rem;
+}
+/* check button */
+.dash-circle {
+  width: 1.5rem;
+  height: 7.56rem;
+}
+
+.circle2,
+.circle3,
+.circle4,
+.circle5 {
+  display: none;
+}
+
+.learn {
+  padding-right: 2rem;
+  margin: 1.1rem 0rem 1rem 0rem;
+}
+.main-options {
+  display: none;
+}
+.active {
+  display: block;
+}
+.product-button {
+  display: flex;
+  align-items: center;
+}
+
+.product-button p {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 1rem;
+  padding: 0.5rem 1.008rem;
+  border-radius: 0.5rem;
+}
+
+.clicked {
+}
+.open {
+  /* display: none; */
+}
+/* disable-hover */
+
+/* hover properties */
+.enable-hover:hover {
+  background-color: #f1f1f1;
+}
+.product-button p:hover {
+  background-color: #e7e7e7;
+}
+
+.circle1:hover {
+  background-image: url("Property 1=Circle.svg");
+}
+/* active propertites */
+.circle1:active {
+  background-image: url("Property 1=circle fill.svg");
+}
+
+/* focused properties */
+/* .arrow:focus {
+  background-color: #ffffff;
+  border: solid 1px #005bd3;
+} */
