@@ -8,12 +8,80 @@ body {
   font-family: "Inter", sans-serif;
 }
 /* link tags */
-a {
+li {
+  list-style: none;
+  color: #303030;
+
+  border-radius: 0.5rem;
+}
+.email {
+  color: #303030;
+  padding: 0px 9px;
+}
+.first-li {
+  font-weight: 500;
+  padding-bottom: 0rem;
+}
+
+button {
+  border: none;
+}
+.main-options a {
   text-decoration: none;
   color: #005bd3;
   font-size: 14px;
   font-weight: 500;
 }
+.davii-menu a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #303030;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 7.3px 7px;
+}
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+  flex: 1;
+  align-items: center;
+}
+.top-menu2 {
+  display: flex;
+
+  padding: 8px 7px;
+  align-items: center;
+}
+
+.cut {
+  display: block;
+  width: 100%;
+  border-bottom: solid 1px #dbdbdb;
+  margin: 0.3rem 0rem;
+}
+
+.user {
+  font-weight: 500;
+}
+.menu-items2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 8px 7px;
+}
+.menu-items2 p {
+  font-size: 12px;
+}
+.all-stores {
+  display: flex;
+  margin: 0.09rem 0rem 0rem 0.3rem;
+}
+
 /* Profile text */
 .profile-menu p {
   color: white;
@@ -21,8 +89,7 @@ a {
   margin-right: 2rem;
 }
 .span {
-  width: 1.75rem;
-  height: 1.75rem;
+  padding: 0.45rem;
   background-color: #36fba1;
   margin-left: 0.8rem;
   border-radius: 0.3rem;
@@ -39,6 +106,7 @@ a {
 }
 /* Navigation styling */
 nav {
+  width: 100%;
   background-color: #1c181d;
   height: 3.5rem;
   display: flex;
@@ -51,7 +119,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 /* menu */
@@ -59,11 +126,12 @@ nav {
   display: flex;
   justify-content: flex-end;
   flex: 1 1 10rem;
+  position: relative;
+  margin-right: 1rem;
 }
 
-.notification {
-  width: 2rem;
-  height: 2rem;
+.notification button {
+  padding: 0.531rem 0.563rem;
   display: flex;
   justify-content: center;
   border-radius: 0.5rem;
@@ -74,7 +142,7 @@ nav {
 
 /* Search input */
 .search input {
-  width: 30rem;
+  width: 100%;
   height: 2rem;
   background-color: #322f33;
   border-radius: 0.5rem;
@@ -88,6 +156,12 @@ nav {
 
 #logo {
   flex: 1 1 10rem;
+  display: flex;
+  align-items: center;
+}
+#logo a {
+  text-decoration: none;
+  font-size: 30px;
 }
 
 .search {
@@ -104,11 +178,8 @@ nav {
   left: 0.5rem;
 }
 
-.profile-menu {
-  padding: 0.5rem;
-  width: 8.88rem;
-  height: 2rem;
-  margin-left: 1rem;
+.profile-menu button {
+  padding: 0.562rem 0.781rem;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -117,7 +188,143 @@ nav {
   cursor: pointer;
   position: relative;
 }
+.profile-menu {
+  margin-left: 0.5rem;
+}
+/* menu pop-down */
 
+.davii-menu {
+  background-color: #ffffff;
+  border: solid 1px #dbdbdb;
+  border-radius: 1rem;
+  width: 320px;
+  height: 384px;
+  padding: 0.3rem 0rem;
+  position: absolute;
+  top: 3rem;
+  z-index: 1;
+  display: none;
+}
+
+.davii-content {
+  display: flex;
+  background-color: #f1f1f1;
+  border-radius: 0.5rem;
+  margin: 0px 6px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.davii-content-li {
+  margin: 0.1rem 0.2rem;
+}
+
+.davii-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #303030;
+}
+
+.davii-span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+.span1 {
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: #36fba1;
+  margin-right: 0.5rem;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.span1 p {
+  opacity: 0.4;
+  color: #000000;
+  margin: 0rem;
+}
+
+.label-one {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  padding: 0.3rem;
+}
+.label-one svg {
+  margin-right: 8px;
+}
+.label-one svg {
+  padding: 1px 0px;
+}
+.content-container {
+  width: 100%;
+}
+
+.menu-active {
+  display: block;
+}
+.menu-hide {
+  display: none;
+}
+
+/* notification pop-down */
+
+.alert-popdown {
+  background-color: #ffffff;
+  border: solid 1px #dbdbdb;
+  padding: 16px;
+  width: 358px;
+  height: 136px;
+  position: absolute;
+  top: 3rem;
+  border-radius: 1rem;
+  z-index: 1;
+}
+.alert-popheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.alert-popheader p {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 600;
+}
+.alert-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.alert-icons svg {
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.circle-tick {
+  margin-left: 16px;
+}
+.alert-text {
+  background-color: #f1f1f1;
+  padding: 16px;
+  text-align: center;
+  margin-top: 16px;
+}
+.alert-text p {
+  color: #616161;
+  font-weight: 600;
+  font-size: 13px;
+}
+.alert-active {
+  display: block;
+}
+.alert-hide {
+  display: none;
+}
 /* main page font sizes */
 .trial p {
   font-size: 0.75rem;
@@ -132,15 +339,21 @@ nav {
   flex-direction: column;
 }
 .trial {
-  width: 50rem;
-  height: 3.5rem;
+  width: 58.566%;
+  /* padding: 100rem 0rem; */
   background-color: #1a1a1a;
   border-radius: 0.5rem;
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 32px;
   align-items: center;
   padding: 1rem;
+  flex-wrap: wrap;
+}
+
+/* hide trial bar */
+.hidden {
+  display: none;
 }
 
 .select-cancel {
@@ -156,9 +369,18 @@ nav {
   color: #323232;
   font-weight: 600;
   font-size: 0.75rem;
-  margin-right: 1rem;
   cursor: pointer;
   padding: 0.416rem 0.644rem;
+}
+.select-cancel a {
+  margin-right: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #323232;
+
+  /* padding: 0.416rem 0.644rem; */
 }
 
 .select-cancel svg {
@@ -174,6 +396,7 @@ nav {
 }
 .info {
   font-size: 13px;
+  font-weight: 400;
   color: #303030;
   margin: 0.5rem 0rem 1rem 0rem;
 }
@@ -189,13 +412,15 @@ nav {
 .progress p {
   margin-right: 0.5rem;
 }
+
 /* content of the main-page */
+
 .main-content {
   background-color: #ffffff;
   border: solid 1px #dbdbdb;
   border-radius: 1rem;
   padding: 0.449rem;
-  width: 50rem;
+  width: 58.566%;
   margin-top: 1rem;
   cursor: pointer;
 }
@@ -205,6 +430,7 @@ nav {
 .content {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .arrow {
@@ -226,58 +452,46 @@ nav {
 .rotate-arrow {
   transform: rotate(180deg);
 }
-/* ------ Main Options closed state ------ */
-.options0CL,
-.options1CL,
-.options2CL,
-.options3CL,
-.options4CL {
-  display: flex;
-  justify-content: space-between;
-  /* background-color: #f3f3f3; */
-  border-radius: 0.5rem;
-  padding: 0.51rem 0.35rem;
-  /* margin: 0.5rem 0rem 0.5rem 0rem; */
-}
-.custom-textCL,
-.product-textCL,
-.domain-textCL,
-.payment-textCL,
-.store-textCL {
-  font-size: 13px;
-  font-weight: 500;
-  color: #303030;
-}
-.options0CL {
-  margin-top: 1rem;
-}
 
 /* ------ Main options opened state ------ */
-.pop-down {
+.pop-down,
+.img-hide {
+  display: none;
+}
+
+.pop-event {
   display: block;
-  background-color: #f3f3f3;
 }
 /* main conent text size */
+/* option name without active class */
 .custom-text,
 .product-text,
 .domain-text,
 .payment-text,
 .store-text {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   color: #303030;
 }
+/* option name with active class */
+.active1 .custom-text,
+.active1 .product-text,
+.active1 .domain-text,
+.active1 .payment-text,
+.active1 .store-text {
+  font-weight: 600;
+}
+
 .custom-about,
 .product-about,
 .domain-about,
 .payment-about,
 .store-about {
-  /* display: flex; */
   flex: 1;
   font-size: 13px;
   color: #616161;
   font-weight: 500;
-  padding: 0.3rem 0rem 0.3rem 0.5rem;
+  padding: 0.25rem 0.51rem;
 }
 
 /* content buttons */
@@ -301,7 +515,7 @@ nav {
   border-left: solid 1.5px rgba(255, 255, 255, 0.56);
   border-bottom: none;
   box-shadow: 0.2px 0.3px 0.1px 2.5px #404040;
-  cursor: pointer;
+  font-weight: 600;
 }
 
 /* content drop down */
@@ -312,11 +526,11 @@ nav {
 .options4 {
   display: flex;
   justify-content: space-between;
-  /* background-color: #f3f3f3; */
+
   border-radius: 0.5rem;
-  padding: 0.51rem 0.35rem;
-  margin: 1.5rem 0rem 0rem 0rem;
+  padding: 0.4rem 0.35rem;
 }
+
 .custom-theme,
 .product-theme,
 .domain-theme,
@@ -325,6 +539,7 @@ nav {
   display: flex;
   flex: 2.008;
 }
+
 .custom-image,
 .product-image,
 .domain-image,
@@ -333,10 +548,6 @@ nav {
   margin-left: 1.86rem;
 }
 /* check button */
-.dash-circle {
-  width: 1.5rem;
-  height: 7.56rem;
-}
 
 .circle2,
 .circle3,
@@ -351,6 +562,11 @@ nav {
 }
 .main-options {
   display: none;
+}
+
+.active1 {
+  padding-top: 0.4rem;
+  background-color: #f3f3f3;
 }
 .active {
   display: block;
@@ -368,14 +584,15 @@ nav {
   border-radius: 0.5rem;
 }
 
-.clicked {
-}
-.open {
-  /* display: none; */
-}
-/* disable-hover */
-
 /* hover properties */
+.search-input:hover {
+  outline: solid 1px #e1e1e1;
+}
+
+.profile-menu button:hover,
+.notification button:hover {
+  background-color: #616161;
+}
 .enable-hover:hover {
   background-color: #f1f1f1;
 }
@@ -385,14 +602,193 @@ nav {
 
 .circle1:hover {
   background-image: url("Property 1=Circle.svg");
+  cursor: pointer;
 }
-/* active propertites */
-.circle1:active {
-  background-image: url("Property 1=circle fill.svg");
+.active1:hover {
+  cursor: default;
+}
+.davii-content-li:hover {
+  background-color: #e7e7e7;
+}
+.alert-icons svg:hover {
+  background-color: #e7e7e7;
 }
 
+/* active propertites */
+.profile-menu button:active,
+.notification button:active {
+  background-color: #656266;
+}
+.search-input button:active {
+  outline: solid 2px #ffffff;
+}
+.davii-content-li:active {
+  background-color: #e0e0e0;
+
+  border-radius: 0.5rem;
+}
+.alert-icons svg:active {
+  background-color: #e0e0e0;
+}
 /* focused properties */
-/* .arrow:focus {
-  background-color: #ffffff;
-  border: solid 1px #005bd3;
-} */
+.search-input:focus {
+  outline: solid 2px #ffffff;
+}
+.profile-menu button:focus,
+.notification button:focus {
+  outline: solid 2px #005bd3;
+  background-color: #656266;
+}
+
+.circle1:focus {
+  outline: solid 2px #005bd3;
+  border-radius: 1rem;
+}
+.select-cancel button:focus {
+  outline: solid 2px #005bd3;
+}
+
+a:focus {
+  border-radius: 0.5rem;
+  outline: solid 2px #005bd3;
+}
+
+.optionsOP:focus {
+  border-radius: 0.5rem;
+  outline: solid 2px #005bd3;
+}
+.content:focus {
+  border-radius: 0.5rem;
+  outline: solid 2px #005bd3;
+}
+.arrow:focus {
+  border-radius: 0.5rem;
+  outline: solid 2px #005bd3;
+}
+
+.alert-icons svg:focus {
+  outline: solid 2px #005bd3;
+}
+
+/* Responsiveness */
+
+@media not all and (min-width: 768px) {
+  .trial {
+    width: 100%;
+    border-radius: 0rem;
+  }
+  .main-content {
+    width: 100%;
+    padding: 0rem 0.3rem;
+    border-radius: 0rem;
+  }
+  .response-davi {
+    display: none;
+  }
+  .profile-menu button {
+    padding: 0rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    position: relative;
+    margin-top: 0.1rem;
+  }
+  .span {
+    right: 0rem;
+    position: initial;
+    margin: 0rem;
+  }
+  .notification button {
+    background: none;
+  }
+  /* .letters {
+    display: none;
+  } */
+  .search-input {
+    width: 100%;
+    flex: 2;
+  }
+  .notify-menu {
+    flex: 1;
+  }
+  #logo {
+    flex: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+  #shopify {
+    background-image: url(https://crushingit.tech/hackathon-assets/shopify-icon.svg);
+    padding: 1rem;
+    width: 1rem;
+  }
+
+  .shopify-logo {
+    background-image: url(https://crushingit.tech/hackathon-assets/shopify-icon.svg);
+  }
+
+  img {
+    display: none;
+  }
+  .select-cancel {
+    margin-top: 1rem;
+  }
+  .select-cancel button {
+    padding: 6px 12px;
+  }
+  .trial {
+    position: relative;
+  }
+  .trial p {
+    padding: 0px 44px 0px 0px;
+  }
+  .main-content {
+    padding-top: 8px;
+  }
+  .cancel-display {
+    position: absolute;
+    right: 1rem;
+    top: 1.7rem;
+  }
+  .davii-menu {
+    width: 90vw;
+  }
+  .alert-popdown {
+    width: 90vw;
+  }
+  a:focus {
+    outline: none;
+  }
+  .search-input:focus {
+    outline: solid 2px #ffffff;
+  }
+  .profile-menu button:focus,
+  .notification button:focus {
+    outline: none;
+    background-color: #656266;
+  }
+
+  .circle1:focus {
+    outline: none;
+    border-radius: 1rem;
+  }
+  .select-cancel button:focus {
+    outline: none;
+  }
+
+  .optionsOP:focus {
+    border-radius: 0.5rem;
+    outline: none;
+  }
+  .content:focus {
+    border-radius: 0.5rem;
+    outline: none;
+  }
+  .arrow:focus {
+    border-radius: 0.5rem;
+    outline: none;
+  }
+
+  .alert-icons svg:focus {
+    outline: none;
+  }
+}
