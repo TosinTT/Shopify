@@ -755,40 +755,4 @@ a:focus {
   .alert-popdown {
     width: 90vw;
   }
-  a:focus {
-    outline: none;
-  }
-  .search-input:focus {
-    outline: solid 2px #ffffff;
-  }
-  .profile-menu button:focus,
-  .notification button:focus {
-    outline: none;
-    background-color: #656266;
-  }
-
-  .circle1:focus {
-    outline: none;
-    border-radius: 1rem;
-  }
-  .select-cancel button:focus {
-    outline: none;
-  }
-
-  .optionsOP:focus {
-    border-radius: 0.5rem;
-    outline: none;
-  }
-  .content:focus {
-    border-radius: 0.5rem;
-    outline: none;
-  }
-  .arrow:focus {
-    border-radius: 0.5rem;
-    outline: none;
-  }
-
-  .alert-icons svg:focus {
-    outline: none;
-  }
 }
